@@ -14,6 +14,27 @@ import os
 import glob
 from pathlib import Path
 
+
+IS_CLOUD = not os.path.exists(os.path.expanduser("~/Desktop"))
+
+if IS_CLOUD:
+    st.warning("⚠️ Cloud Mode - Upload files manually")
+    # Add file uploaders for CSV and images
+    uploaded_csv = st.file_uploader("Upload CSV data", type=['csv'])
+    uploaded_image = st.file_uploader("Upload leaf image", type=['jpg','png'])
+else:
+    # Initialize cloud mode variables as None
+    uploaded_csv = None
+    uploaded_image = None
+
+# Page configuration (your existing code continues here)
+st.set_page_config(
+    page_title="Leaf Health Monitor",
+    page_icon="🌿",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 # Page configuration
 st.set_page_config(
     page_title="Leaf Health Monitor",
