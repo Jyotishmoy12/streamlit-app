@@ -24,16 +24,18 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+# Check if running in cloud or local
+# Check if running in cloud or local
+# Check if running in cloud or local
+
 
 IS_CLOUD = not os.path.exists(os.path.expanduser("~/Desktop"))
 
 if IS_CLOUD:
     st.warning("⚠️ Cloud Mode - Upload files manually")
-    # Add file uploaders for CSV and images
     uploaded_csv = st.file_uploader("Upload CSV data", type=['csv'])
     uploaded_image = st.file_uploader("Upload leaf image", type=['jpg','png'])
 else:
-    # Initialize cloud mode variables as None
     uploaded_csv = None
     uploaded_image = None
 
