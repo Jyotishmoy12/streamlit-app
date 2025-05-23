@@ -14,6 +14,16 @@ import os
 import glob
 from pathlib import Path
 
+# ADD THIS CODE HERE - RIGHT AFTER IMPORTS
+# Detect environment
+
+# Page configuration (your existing code continues here)
+st.set_page_config(
+    page_title="Leaf Health Monitor",
+    page_icon="🌿",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 IS_CLOUD = not os.path.exists(os.path.expanduser("~/Desktop"))
 
@@ -27,21 +37,11 @@ else:
     uploaded_csv = None
     uploaded_image = None
 
-# Page configuration (your existing code continues here)
-st.set_page_config(
-    page_title="Leaf Health Monitor",
-    page_icon="🌿",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
 
-# Page configuration
-st.set_page_config(
-    page_title="Leaf Health Monitor",
-    page_icon="🌿",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+
+
+
+
 
 # Custom CSS
 st.markdown("""
