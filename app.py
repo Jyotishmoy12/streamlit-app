@@ -663,6 +663,8 @@ with st.expander("📋 Hardware Integration Instructions"):
         └── [Captured images]
     ```
     
+    
+    
     ### Features
     - 🔄 **Auto-refresh**: Dashboard updates automatically as hardware collects data
     - 📊 **Live Monitoring**: Real-time display of sensor readings and health status
